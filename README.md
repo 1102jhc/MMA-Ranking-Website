@@ -18,24 +18,23 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  <summary>목차</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">프로젝트</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">사용 기술</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">실행 방법</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prerequisites">코드 에디터</a></li>
+        <li><a href="#installation">설치</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
+    <li><a href="#usage">사용법</a></li>
+    <li><a href="#license">라이센스</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -43,100 +42,59 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## 프로젝트
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/1102jhc/Youtube-Crawler)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/1102jhc/MMA-Ranking-Website)
 
-프로젝트의 목표는 'Simple' 입니다. 기본 유튜브에는 수많은 영상들이 있고 그것을 검색하고자 하는 사람들도 점점 많아져 나날이 최고치를 찍고 있습니다. 그런 사용자들에게 조금은 더 직관적인 검색을 제공하고자 개발하게 되었습니다. 
-
-**Advantages**
-* 필터를 먼저 설정한 뒤 검색을 할 수 있습니다. 검색을 하고나서 필터를 설정하는 불편함을 제거합니다.
-* 추천 검색 결과가 뜨지 않습니다. 불필요한 정보들의 노출을 막아주어 사용자의 편의성이 증가합니다.  
-
-대부분의 사용자들에게는 추천된 영상들 또는 채널들이 그들의 선택에 좀 더 도움을 줄 수도 있습니다. 그렇기 때문에 사용자의 검색 목록들과 조회한 영상들을 분석하여 그들의 성향을 알아낸 것을 기반으로 추천된 리소스들을 나타내어주는 기능을 추가할 계획을 가지고 있습니다.
+여러 MMA 단체의 경기 일정 및 선수 정보들을 모아놓은 사이트입니다. MMA 선수들은 자기들이 소속된 단체 즉, UFC, ROAD FC 등에서 경기를 갖습니다. 이러한 선수들은 자신의 꿈을 실현하기 위해 또는 각자의 이유로 소속된 단체를 바꾸기도 합니다. 이 웹사이트는 선수들의 소속이 바뀌어도 한 눈에 볼 수 있게 다양한 단체들의 정보를 나타내 주기 위해 만들어졌습니다.
 
 
-### Built With
+### 사용 기술
 
 프로젝트를 제작하는 데 사용된 주요 모듈을 기술하는 부분입니다. 언어, 프레임워크, API 등을 포함합니다.
 
-* [C#(Windows Forms App(.NET Framework))](https://dotnet.microsoft.com/)
-* [YoutubeDataAPI](https://developers.google.com/youtube/v3)
-
-
+* [JSP]
+* [Bootstrap](http://bootstrapk.com/)
+* [MySQL](https://www.mysql.com/)
+* [Tomcat(8.5)](http://tomcat.apache.org/)
 
 <!-- GETTING STARTED -->
-## Getting Started
+## 실행 방법
 
 프로젝트를 로컬저장소에 다운받아 설정하는 방법에 대한 지침을 제공하는 방법입니다.
 프로젝트를 실행하려면 다음 단계들을 따라해주세요.
 
-### Prerequisites
+### 코드 에디터
 
 프로젝트를 실행시키기 위해 필요한 소프트웨어 및 설치방법을 알려주는 예시입니다.
 
-1. 비쥬얼 스튜디오를 설치합니다. 이 프로젝트는 2019버전을 사용하였습니다.
-* Visual Studio 2019 [https://visualstudio.microsoft.com/ko/vs/](https://visualstudio.microsoft.com/ko/vs/)
+1. 이 프로젝트는 Eclipse를 사용하였습니다.
+* Eclipse [https://www.eclipse.org/](https://www.eclipse.org/)
   
-2. VS에서 '추가 도구 및 기능설치' 를 누르고 Windows Forms App(.NET Framework) 템플릿을 설치합니다.
+### 설치
 
-### Installation
-
-1. 본인의 ' Youtube API KEY ' 를 발급받습니다. [https://console.developers.google.com](https://console.developers.google.com)
+1. Apache Tomcat을 다운받습니다. 이 프로젝트는 Apache Tomcat v8.5를 사용하였습니다.
 2. repo를 Clone 합니다.
  ```sh
    git clone https://github.com/your_username_/Project-Name.git
    ```
-3. Youtube-Crawler 폴더 안의 Like_Youtube.sln 을 실행시킵니다. 
-4. API 패키지를 설치합니다.
-* VS에서 Nuget 패키지 관리자 >> 패키지 관리자 콘솔(Package Manager Console)
-  ```sh
-  install-package Google.APIs
-  install-package Google.APIs.YouTube.v3
-  ```
-* 4번째 단계는 Youtube Data API를 사용하기 위해 설치하는 패키지입니다. 위 프로젝트에는 패키지가 이미 있기에 별도의 설치가 필요없으며 차후 버전의 문제나 별도의 작업을 하실 경우 참고하여 설치 해주세요.  
-5. Form1의 176, 366번째 줄에 본인의 API 키를 넣습니다.
- ```
-   ApiKey=" put your API Key "
-   ```
+3. Eclipse의 workspace에 프로젝트를 넣습니다.
+4. 1에서 설치한 Tomcat을 Server로 등록합니다.
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## 사용법
 
 프로젝트 사용법을 나타낸 항목입니다.
 
-1. Youtube-Crawloer 폴더 안의 Like_Youtube.sln을 실행해 주세요.
-2. 본인의 API Key로 바꾸어 입력해주세요.
-```
-   ApiKey=" put your API Key "
-   ```
-3. 실행하시면 로고 창이 나오면서 1초 후 메인 폼으로 이동합니다.
-4. 텍스트 창에 검색어 입력 후 필터를 설정하여 검색 버튼을 눌러주세요.
-5. 리스트 박스에 검색된 리소스들이 나옵니다.
-* 검색된 리소스를 좌클릭 하면 우측 창에 썸네일과 관련 정보들이 나오고 우클릭하면 미리보기 창이 나오며 더블클릭 시 사용자의 디폴트 브라우저로 해당 리소스 페이지를 띄워줍니다.
-
-6. 메인 폼의 종료 버튼을 눌러도 꺼지지 않고 우측 밑 NotifyIcon으로 남습니다. 
-7. NotifyIcon 좌클릭 시 모달 창이 나오며 썸네일 폴더 및 도움말을 볼 수 있습니다.
-8. 종료 하고 싶으시면 NotifyIcon을 우클릭 후 종료 버튼을 눌러주세요.
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-여러분의 기여는 오픈 소스 커뮤니티를 윤택하고 활력 있는 배움과 영감의 장소로 만들어 줍니다. 모든 의견은 항상 **감사하게** 받겠습니다.
-
-1. 프로젝트를 Fork 합니다.
-2. master 기반으로 브랜치를 만듭니다.
-3. 수정하여 Commit 합니다.
-4. 브랜치에 Push 합니다.
-5. Pull Request를 생성합니다.
-
-
+1. Run on Server로 실행시켜주세요.
+2. 각각 UFC, BELLATOR, ROADFC 태그가 있습니다. 각 태그를 누르시면 해당 MMA 단체의 선수 경기 일정 및 승률 등을 보실 수 있습니다.
+3. 로그인 후 마이페이지에서는 선수 검색을 할 수 있습니다.
+*본 프로젝트에는 MySQL(Workbench)을 사용하여 데이터를 등록하였습니다. 
 
 <!-- LICENSE -->
-## License
+## 라이센스
 
 이 프로젝트는 MIT 라이센스에 따라 배포됩니다. 자세한 내용은 LICENSE.md를 참고해주세요.
-README.md는 오픈소스를 활용한 것으로 MIT 라이선스에 따라 배포됩니다. 자세한 내용은 LICENSE.txt를 참조하세요.
 
 <!-- CONTACT -->
 ## Contact
