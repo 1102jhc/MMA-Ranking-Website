@@ -53,7 +53,7 @@
 
 프로젝트를 제작하는 데 사용된 주요 모듈을 기술하는 부분입니다. 언어, 프레임워크, API 등을 포함합니다.
 
-* [JSP]
+* [JSP](#)
 * [Bootstrap](http://bootstrapk.com/)
 * [MySQL](https://www.mysql.com/)
 * [Tomcat(8.5)](http://tomcat.apache.org/)
